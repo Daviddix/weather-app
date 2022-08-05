@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/weather logo.png" type="image/x-icon">
+    <title>Daily Weather</title>
+    <meta name="description" content="A simple weather webapp that gives you the weather details for any given location based on the openweathermap API">
+    
+    <meta property="og:description" content="A simple weather webapp that gives you the weather details for any given location based on the openweathermap API">
+</head>
+<body>
+   <main>
+       <section class="first">
+           <header>
+               <input type="search" name="city name" id="" placeholder="Type your city/state's name here">
+
+               <div class="search">
+                   <img src="/images/search.svg" alt="search for the weather" class="search-btn">
+               </div>
+               
+           </header>
+
+           <p class="location">
+               <span class="state"></span> <span class="country"></span></p>
+
+           <p class="date"></p>
+
+           <p class="temperature-main"></p>
+
+           <img src="/images/Path.svg" alt="" class="underline">
+
+           <p class="weather-description"></p>
+           
+           <p class="detailed-weather-description"> </p>
+           <p class="min-max"><span class="min"></span><span class="max"></span></p>
+       </section>
+
+       <section class="second">
+           <h1>Weather Details:</h1>
+           <div class="details">
+               <div class="details-left">
+               <p>Wind Speed</p>
+               <p>Wind Gust</p>
+               <p>Wind Degree</p>
+               <p>Humidity</p>
+               <p>Pressure</p>
+               <p>Visibility</p>
+               <p>Clouds</p>
+               </div>
+
+               <div class="details-right">
+                   <p class="wind-speed"></p>
+                   <p class="wind-gust"></p>
+                   <p class="wind-degree"></p>
+                   <p class="humidity"></p>
+                   <p class="pressure"></p>
+                   <p class="visibility"></p>
+                   <p class="clouds"></p>
+               </div>
+           </div>
+       </section>
+   </main>
+
+<div class="popup-overlay">
+           <div class="popup">
+               <p>Please enter the name of your state</p>
+               <input type="text" name="" id="" placeholder="e.g abuja">
+               <p class="loading"></p>
+               <button>Get Weather</button>
+           </div>
+       </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

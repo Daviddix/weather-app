@@ -1,0 +1,429 @@
+*, *::before, *::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: ama;
+}
+
+@font-face {
+    font-family: ama;
+    src: url('/Fonts/OTF/Amulya-Regular.otf');
+}
+
+:root{
+--orangeLight: #FFA84C;
+--orangeDark: #E9582F;
+--orangeMag: #BD3914;
+
+--blueLight: #42AAD3;
+--blueDark: #0E2D3A;
+--blueMag : #134153;
+
+--darkDark: #222222;
+--darkLight: #333333;
+--darkMag: #000000;
+
+--textDark: hsla(0, 0%, 0%, 0.644);
+--textLight: hsla(0, 0%, 95%, 0.192);
+}
+
+main{
+    max-width: 100vw;
+    min-height: 100vh;
+    background: grey;
+    color:white;
+    padding: 4rem 0 4rem 0;
+}
+
+/* styling for the search side*/
+header{
+    margin: 0 auto 4rem;
+    max-width: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header input{
+    padding: .9rem .5rem .9rem 1rem;
+    width:20rem;
+    border: 1px solid #0e020125;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    background-color: #c8c8c81a;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+header input::placeholder{
+    color: var(--textDark);
+    font-size: 1.1rem;
+}
+
+header div.search{
+    background-color: var(--orangeMag);
+    height: 3rem;
+    width: 3rem;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+header div.search img{
+    max-width: 2rem;
+}
+
+/* styling for the basic info*/
+p.location{
+    font-size: 3.5rem;
+    text-align: center;
+    position: relative;
+    max-width: fit-content;
+    margin: auto;
+}
+
+p.location::before{
+    content: url('/images/map-pin.svg');
+    position: absolute;
+    top:-.8rem;
+    left:-2rem;
+}
+
+p.date{
+    margin: 0rem 0;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+p.temperature-main{
+    font-size: 9rem;
+    text-align: center;
+    margin: 0 0 -2rem 0;
+}
+
+img.underline{
+    max-width: 19rem;
+    margin:0 auto;
+    text-align: center;
+    display: block;
+
+}
+
+p.weather-description{
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+p.detailed-weather-description{
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 100;
+}
+
+p.min-max{
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0 0 4rem 0;
+}
+
+/* styling for the weather details side*/
+.second{
+    max-width: 24rem;
+    margin: auto;
+}
+.second h1{
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+.second .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second .details>*{
+    width:100%;
+}
+
+.second .details .details-left p{
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+.second .details .details-right{
+    border-left: 1px solid white;
+    padding: 0 0 0 2rem;
+}
+
+.second .details .details-right p{
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+@media screen and (min-width:500px) and (max-width:850px) {
+    header{
+        max-width: 30rem;
+    }
+
+    header input{
+        width:26rem;
+        padding: 1rem .5rem 1rem 1rem;
+    }
+
+    .second{
+        max-width: 30rem;
+    }
+
+    .second .details{
+        margin: 0 0 0 3rem;
+    }
+
+    .second .details .details-left p,
+    .second .details .details-right p{
+        font-size: 1.5rem;
+        margin: 0 0 2rem;
+    }
+
+    .second .details .details-right{
+        border-left: 1px solid white;
+        padding: 0 0 0 4rem;
+    }
+    
+}
+
+    @media screen and (min-width:850px) and (max-width:950px) {
+        header{
+            max-width: 35rem;
+        }
+    
+        header input{
+            width:30rem;
+            padding: 1rem .5rem 1rem 1rem;
+        }
+    
+        .second{
+            max-width: 30rem;
+        }
+    
+        .second .details{
+            margin: 0 0 0 3rem;
+        }
+
+        .second h1{
+            font-size: 1.8rem;
+        }
+    
+        .second .details .details-left p,
+        .second .details .details-right p{
+            font-size: 1.8rem;
+            margin: 0 0 2rem;
+        }
+    
+        .second .details .details-right{
+            border-left: 1px solid white;
+            padding: 0 0 0 4rem;
+            margin: 0 0 0 2rem;
+        }
+    }
+
+    @media screen and (min-width:950px) {
+        main{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10rem 10rem;
+        }
+
+        main::before{
+            content: '';
+            width: .1rem;
+            height:77vh;
+            background-color: rgba(255, 255, 255, 0.479);
+            position: absolute;
+            top: 20rem;
+            left:48%;
+        }
+
+        main >*{
+            width:100%;
+        }
+
+        header{
+            max-width:40rem;
+            margin:0 auto 6rem;
+        }
+
+        header input{
+            width:40rem;
+            margin: 0 2rem 0 0;
+            padding: 1rem .5rem 1rem 2rem;
+            color:rgb(255, 255, 255);
+            font-size: 1.6rem;
+        }
+
+        header input::placeholder{
+            color: var(--textDark);
+            font-size: 1.4rem;
+        }
+
+        header div.search{
+            width:4rem;
+            height:4rem;
+            cursor: pointer;
+        }
+
+        header div.search img{
+            max-width: 3rem;
+            pointer-events: none;
+        }
+
+        /* styling fot the info stuff */
+
+        p.location{
+            font-size: 5.5rem;
+        }
+
+        p.location::before{
+            content: url('/images/map-pin.svg');
+            position: absolute;
+            top:-2.5rem;
+            left:-2rem;
+        }
+
+        p.date{
+            font-size: 2.1rem;
+            margin: 0 0 2rem;
+        }
+
+        p.temperature-main{
+            font-size: 14rem;
+            letter-spacing: -1rem;
+            margin: 0 0 -2rem 0;
+        }
+
+        img.underline{
+            max-width: 30rem;
+        }
+
+        p.weather-description{
+            font-size: 3rem;
+        }
+        
+        p.detailed-weather-description{
+            font-size: 1.9rem;
+        }
+        
+        p.min-max{
+            font-size: 1.7rem;
+        }
+
+        /* styling for the details side*/
+        .second{
+            margin: 12rem 0 0 2rem;
+            width: 100%;
+            max-width: none;
+        }
+
+        .second .details{
+            margin: 0 0 0 2rem;
+            max-width: 66rem;
+        }
+
+        .second h1{
+            font-size: 2.5rem;
+            margin: 0 0 2rem;
+            text-align: left;
+        }
+
+        .second .details .details-right{
+            border-left: 1px solid white;
+            padding: 0 0 0 4rem;
+        }
+
+        .second .details .details-left p,
+        .second .details .details-right p{
+            font-size: 2rem;
+            margin: 0 0 3rem;
+        }
+
+    }
+
+    .popup-overlay{
+        position: absolute;
+        height: 100vh;
+        width:100%;
+        top:0;
+        left:0;
+        background-color:#4C79EC;
+        display: grid;
+        place-items: center;
+        overflow-y: hidden;
+    }
+
+    .popup{
+        background-color: white;
+        color:black;
+        max-width: 40rem;
+        width:90vw;
+        height:17rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        padding: 0 1rem;
+}
+
+.popup p{
+    margin: 3rem 0 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.popup input{
+    display: block;
+    width: 90%;
+    padding: .7rem;
+    border-radius: .5rem;
+    border: 1px solid #22222260;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    margin: 0 auto 2rem;
+}
+
+.popup button{
+    display: block;
+    margin: 0 auto;
+    background-color: #4C79EC;
+    color:white;
+    border:none;
+    padding: .7rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.popup button:active{
+    background-color: hsl(223, 81%, 51%);
+}
+
+.popup-overlay.close{
+    display:none;
+}
