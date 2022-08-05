@@ -10,7 +10,7 @@
 
 ## Overview
 A simple weather webapp that gives you the weather details for any given location based on the data gotten from  openweathermap API.
-It also allows you to search and view the weather of over 200, 00 states and cities around the world.
+It also allows you to search and view the weather of over 200,000 states and cities around the world.
 The design and assets were made using invision studio(a UI design software)
 
 ### Features
